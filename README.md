@@ -1,74 +1,192 @@
-# Intro to Web Design
+# APC Americas
 
-A beginner-friendly web design project showcasing fundamental HTML, CSS, and JavaScript concepts. This repository demonstrates a multi-page website for an "Animal Preservation Centre - Americas" organization.
+### Animal Preservation Centre | Wildlife, habitats, and communities
 
-## Project Overview
+<p align="center">
+  <strong>A polished multi-page conservation website built with semantic HTML, custom CSS, Bootstrap 5, and vanilla JavaScript.</strong>
+</p>
 
-This is an introductory web design project that covers core web development topics including:
-- HTML semantic structure and elements
-- CSS styling and layout
-- Basic navigation and page structure
-- Multimedia embedding (video, audio, iframes)
-- Multi-page website architecture
+<p align="center">
+  <a href="index.html">Explore the website</a> &nbsp; | &nbsp;
+  <a href="species.html">Meet the species</a> &nbsp; | &nbsp;
+  <a href="get_involved.html">Get involved</a>
+</p>
 
-## Project Structure
-intro-to-web-design/ ├── index.html # Home page with animal preservation content ├── about_us.html # About page with agency information ├── contact_us.html # Contact form page ├── confirmation.html # Form submission confirmation page ├── stylesheets/ │ ├── site.css # Custom site styling │ ├── bootstrap.css # Bootstrap framework (full) │ └── bootstrap.min.css # Bootstrap framework (minified) ├── scripts/ │ ├── site.js # Custom site scripts │ ├── bootstrap.min.js # Bootstrap JavaScript (minified) │ └── jquery.min.js # jQuery library (minified) ├── images/ # Directory for image assets └── videos/ # Directory for video files (referenced but not included)
+---
 
+## The Experience
 
-## Pages
+APC Americas presents a premium, editorial-style wildlife conservation experience. Visitors can move from inspiration to action through a clear path:
 
-### Home Page (`index.html`)
-- Features multiple heading examples (h1-h6)
-- Embedded YouTube video showing a preservation success story
-- Embedded audio and video media players
-- Sample content demonstrating content structure
+> **Discover the mission -> Explore the work -> Meet protected species -> Read field stories -> See impact -> Take action**
 
-### About Us (`about_us.html`)
-- Agency information and mission
-- Unordered list of daily tasks
-- Ordered list of recruitment steps
-- Image integration
-- Professional semantic HTML structure
+The design preserves the existing visual identity:
 
-### Contact Us (`contact_us.html`)
-- Contact form for visitor inquiries
+| Element | Direction |
+| --- | --- |
+| Primary color | Deep forest green for trust and conservation |
+| Accent | Golden yellow for energy and calls to action |
+| Background | Cream and off-white surfaces for warmth |
+| Type | Serif display headings with clean sans-serif body text |
+| Components | Spacious layouts, white panels, rounded corners, subtle shadows |
+| Motion | Quiet reveal animations, hover elevation, and count-up statistics |
 
-### Confirmation (`confirmation.html`)
-- Thank you page after form submission
+> **Content note:** Statistics, team details, contact information, and field stories are demonstration content. Replace them with verified APC data before launch.
 
-## Styling
+## Website Flow
 
-The project uses custom CSS (`stylesheets/site.css`) for site-specific styling, including:
+```mermaid
+flowchart LR
+    Home[Home] --> About[About]
+    Home --> Programs[Programs]
+    Home --> Species[Species Explorer]
+    Home --> Stories[Stories]
+    Home --> Impact[Impact]
+    Home --> Action[Get Involved]
+    About --> Programs
+    Programs --> Species
+    Species --> Action
+    Stories --> Story[Story Detail]
+    Impact --> Action
+    Action --> Donate[Donation Demo]
+    Action --> Volunteer[Volunteer Form]
+    Action --> Contact[Contact]
+```
 
-- **Header & Navigation**: Navigation bar with hover effects (cadetblue background, aquamarine hover)
-- **Typography**: 
-  - Headings use Franklin Gothic Medium font family
-  - Paragraph text uses Courier New font
-  - Custom classes for different text appearances (.DifferentLookingText, .WeirdColor)
-- **Layout**: Main content width constrained to 80% with centered layout
-- **Color Scheme**: Blue tones for header, crimson for headings, professional footer
+## Page Map
 
-Bootstrap framework is also included for additional styling options.
+| Page | Purpose | Key interaction |
+| --- | --- | --- |
+| [Home](index.html) | Introduces the mission and directs visitors into the site | Animated counters, newsletter demo, media embeds |
+| [About Us](about_us.html) | Explains the story, vision, values, and working region | Mission panels and support-use visualisation |
+| [Programs](programs.html) | Explains conservation programs and the working model | Program cards and Discover -> Protect -> Restore -> Monitor -> Recover timeline |
+| [Species Explorer](species.html) | Makes protected species searchable and browsable | Search, category filters, and dynamic species profiles |
+| [Impact](impact.html) | Shows demonstration outcomes and milestones | Animated statistics, timeline, and impact bars |
+| [Stories](stories.html) | Shares editorial conservation stories | Story cards leading to dedicated detail pages |
+| [Story Detail](story_detail.html?story=forests) | Displays an individual story selected by URL | Query-string driven article content |
+| [Gallery](gallery.html) | Presents field and wildlife imagery | Click-to-open lightbox with caption |
+| [Get Involved](get_involved.html) | Converts interest into participation | Donation demo and validated volunteer form |
+| [Contact](contact_us.html) | Provides locations and a contact route | Responsive table, inquiry form, and map placeholder |
+| [Confirmation](confirmation.html) | Confirms a submitted inquiry | Return-home action |
 
-## Technologies Used
+## Architecture
 
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Styling and layout
-- **JavaScript**: jQuery and Bootstrap for interactivity
-- **Bootstrap 4/5**: Responsive design framework
-- **jQuery**: DOM manipulation library
+```mermaid
+graph TD
+    HTML[HTML pages] --> CSS[stylesheets/site.css]
+    HTML --> Bootstrap[Bootstrap 5 CDN]
+    Interactive[Interactive pages] --> JS[scripts/site.js]
+    JS --> Counters[Scroll counters]
+    JS --> Filters[Species search and filters]
+    JS --> Profiles[Species profiles]
+    JS --> Stories[Story detail routing]
+    JS --> Lightbox[Gallery lightbox]
+    JS --> Forms[Demo forms]
+    Assets[images and remote media] --> HTML
+```
 
-## Features
+### Repository layout
 
-- Multi-page navigation structure
-- Responsive design framework (Bootstrap)
-- Multimedia content (video, audio, iframes)
-- Contact form integration
-- Clean semantic HTML structure
-- Custom CSS styling
+```text
+.
+├── index.html
+├── about_us.html
+├── programs.html
+├── species.html
+├── impact.html
+├── stories.html
+├── story_detail.html
+├── gallery.html
+├── get_involved.html
+├── contact_us.html
+├── confirmation.html
+├── images/
+│   ├── baby-snow-leopard.jpg
+│   └── random-logo-png-transparent.png
+├── scripts/
+│   └── site.js
+└── stylesheets/
+    └── site.css
+```
 
-## Getting Started
+## Interaction Model
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Vikasingh99/intro-to-web-design-udemy.git
+### Species Explorer
+
+Species cards carry structured `data-*` attributes. `scripts/site.js` uses those values to:
+
+1. Match search text against visible species content.
+2. Filter by animal class or conservation status.
+3. Populate the profile panel without leaving the page.
+4. Scroll the selected profile into view.
+
+### Story Detail Pages
+
+Each story card links to the same reusable page with a different query string:
+
+```text
+story_detail.html?story=forests
+story_detail.html?story=rescue
+story_detail.html?story=habitat
+story_detail.html?story=community
+```
+
+The JavaScript selects the matching article data, image, field note, and page title.
+
+### Forms and Donations
+
+The donation and volunteer experiences are front-end demonstrations only:
+
+- Donation amounts update the selected value.
+- One-time and monthly options are displayed.
+- No payment gateway or financial data processing is implemented.
+- Volunteer and newsletter forms use browser validation plus an in-page success state.
+
+## Local Development
+
+This is a static website and does not require a build step or package installation.
+
+```bash
+git clone https://github.com/Vikasingh99/intro-to-web-design-udemy.git
+cd intro-to-web-design-udemy
+```
+
+Then open `index.html` in a browser, or serve the folder with any static server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Visit `http://localhost:8000`.
+
+The site uses these external resources at runtime:
+
+- Bootstrap 5.3.3 CSS and JavaScript from jsDelivr
+- YouTube embeds on the home page
+- Unsplash image URLs on the Species, Stories, and Gallery pages
+
+For offline use, download those assets and update the references to local files.
+
+## Implementation Notes
+
+- **HTML:** semantic page sections, labelled inputs, descriptive image alt text, and accessible navigation labels.
+- **CSS:** one shared stylesheet extends the original forest-green, cream, gold, serif-led system.
+- **JavaScript:** one dependency-free script handles counters, filters, profiles, story routing, lightbox behavior, and demo forms.
+- **Bootstrap:** used for responsive grids, navigation collapse, spacing utilities, forms, and ratio containers.
+- **Responsive behavior:** layouts collapse at tablet and mobile widths; tables scroll within their own containers rather than creating page-wide horizontal scroll.
+
+## Production Checklist
+
+Before publishing a real conservation organization site:
+
+- Replace all demonstration figures with verified impact data.
+- Replace placeholder contact details and map content.
+- Add real team profiles, stories, and locally hosted image assets.
+- Connect forms to a secure backend or form service.
+- Connect donations to a trusted payment provider.
+- Add a privacy policy, terms page, cookie notice, and accessibility review.
+- Test external media and image licenses for production use.
+
+---
+
+<p align="center"><strong>Protecting remarkable wildlife, one habitat at a time.</strong></p>
