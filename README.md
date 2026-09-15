@@ -135,10 +135,13 @@ The JavaScript selects the matching article data, image, field note, and page ti
 
 ### Forms and Donations
 
-The donation and volunteer experiences are front-end demonstrations only:
+The volunteer and donation experiences are front-end demonstrations only:
 
 - Donation amounts update the selected value.
-- One-time and monthly options are displayed.
+- The browser validates the donor email and amount.
+- Donation amounts update the selected value.
+- Donor email is validated in the browser.
+- The form displays an in-page confirmation and does not collect payment details.
 - No payment gateway or financial data processing is implemented.
 - Volunteer and newsletter forms use browser validation plus an in-page success state.
 
@@ -183,7 +186,7 @@ Before publishing a real conservation organization site:
 - Replace placeholder contact details and map content.
 - Add real team profiles, stories, and locally hosted image assets.
 - Connect forms to a secure backend or form service.
-- Connect donations to a trusted payment provider.
+- Connect donations to a trusted payment provider only when a secure backend and verified organization account are available.
 - Add a privacy policy, terms page, cookie notice, and accessibility review.
 - Test external media and image licenses for production use.
 
