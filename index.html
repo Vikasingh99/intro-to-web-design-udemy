@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animal Preservation Centre</title>
+        <meta name="description" content="APC Americas protects wildlife, habitats, and communities through practical conservation work.">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="stylesheets/site.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="banner">
-                <p>Random website notification</p>
+        <div class="site-alert">Protecting remarkable wildlife, one habitat at a time</div>
+        <nav class="site-nav navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">APC <span class="fw-normal">Americas</span>
+                </a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button><div class="collapse navbar-collapse" id="siteNav">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="programs.html">Programs</a>
+                        <a class="nav-link" href="species.html">Species</a>
+                        <a class="nav-link" href="impact.html">Impact</a>
+                        <a class="nav-link" href="stories.html">Stories</a>
+                        <a class="nav-link" href="get_involved.html">Get Involved</a>
+                        <a class="btn btn-donate" href="get_involved.html#donate">Donate</a></div></div></div></nav>
+
+        <main class="page-main">
+            <section class="hero">
+                <div class="container">
+                    <p class="section-kicker text-warning">Animal Preservation Centre</p>
+                    <h1>Keeping wild places thriving for generations.</h1>
+                    <p class="lead mb-4">We protect vulnerable species across the Americas through hands-on conservation, rescue, and community action.</p>
+                    <a class="btn btn-warning btn-lg fw-bold" href="about_us.html">Meet our team</a>
+                    <a class="btn btn-outline-light btn-lg ms-2" href="programs.html">Explore our programs</a>
+                </div>
+            </section>
+            <section class="container py-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <p class="section-kicker">Conservation in action</p>
+                        <h2 class="display-6">Small wins become a future for wildlife.</h2>
+                        <p class="lead">From habitat patrols to species rescue, our work turns local care into lasting protection.</p>
+                        <p class="WeirdColor">Every healthy habitat is a promise kept to the animals that call it home.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="content-panel p-2">
+                            <div class="ratio ratio-16x9">
+                                <iframe class="rounded" src="https://www.youtube.com/embed/CvAqzg7zDsA" title="Jamaican Rock Iguana success story" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container pb-5">
+                <div class="content-panel p-4 p-lg-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-7">
+                            <p class="section-kicker">Featured species</p>
+                            <h2>Costa Rica in 4K</h2>
+                            <p class="mb-0">Take in Costa Rica's lush landscapes and remarkable wildlife in immersive 4K Ultra HD footage, captured at 60 frames per second.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="ratio ratio-16x9">
+                                <iframe class="rounded" src="https://www.youtube.com/embed/LXb3EKWsInQ" title="Costa Rica in 4K nature film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-band alt"><div class="container"><div class="row g-4 text-center"><div class="col-6 col-lg-3 reveal"><div class="stat-number" data-counter="1250" data-suffix="+">0</div><p>Animals rescued</p></div><div class="col-6 col-lg-3 reveal"><div class="stat-number" data-counter="35" data-suffix="+">0</div><p>Habitats protected</p></div><div class="col-6 col-lg-3 reveal"><div class="stat-number" data-counter="18000" data-suffix="+">0</div><p>Trees planted</p></div><div class="col-6 col-lg-3 reveal"><div class="stat-number" data-counter="2500" data-suffix="+">0</div><p>Community members</p></div></div><p class="small text-center mt-4 mb-0">Demonstration figures for this student project, ready to replace with verified APC data.</p></div></section>
+            <section class="section-band"><div class="container"><div class="d-flex flex-wrap justify-content-between align-items-end mb-4"><div><p class="section-kicker">What we do</p><h2>Conservation in practice.</h2></div><a href="programs.html" class="btn btn-outline-success">View all programs</a></div><div class="row g-4"><div class="col-md-6 col-lg-3"><article class="content-panel program-card h-100 p-4"><span class="display-6">↗</span><h3 class="h4 mt-3">Wildlife rescue</h3><p class="small">Responding with care when animals need a second chance.</p><a href="programs.html" class="btn btn-sm btn-forest">Learn more</a></article></div><div class="col-md-6 col-lg-3"><article class="content-panel program-card h-100 p-4"><span class="display-6">⌂</span><h3 class="h4 mt-3">Habitat protection</h3><p class="small">Keeping forests, coastlines, and corridors healthy.</p><a href="programs.html" class="btn btn-sm btn-forest">Learn more</a></article></div><div class="col-md-6 col-lg-3"><article class="content-panel program-card h-100 p-4"><span class="display-6">+</span><h3 class="h4 mt-3">Community conservation</h3><p class="small">Growing solutions with the people closest to the land.</p><a href="programs.html" class="btn btn-sm btn-forest">Learn more</a></article></div><div class="col-md-6 col-lg-3"><article class="content-panel program-card h-100 p-4"><span class="display-6">◎</span><h3 class="h4 mt-3">Wildlife research</h3><p class="small">Turning careful observation into better decisions.</p><a href="programs.html" class="btn btn-sm btn-forest">Learn more</a></article></div></div></div></section>
+            <section class="container pb-5"><div class="content-panel overflow-hidden"><div class="row g-0 align-items-stretch"><div class="col-lg-6"><img class="story-image" src="images/baby-snow-leopard.jpg" alt="Snow leopard in its habitat"></div><div class="col-lg-6 p-4 p-lg-5"><p class="section-kicker">Conservation story</p><h2>Every rescue is a second chance.</h2><p>Behind every successful return is a chain of patient decisions: a safe response, specialist care, and a habitat ready to welcome wildlife home.</p><p class="small"><strong>Field notes:</strong> Americas region · 2025 demonstration story</p><a class="btn btn-forest" href="stories.html">Read the full story</a></div></div></div></section>
+            <section class="dark-cta"><div class="container text-center"><p class="section-kicker text-warning">Stand with wildlife</p><h2>Wildlife needs all of us.</h2><p class="lead mx-auto" style="max-width: 650px;">Your time, voice, and support help turn conservation from an ambition into daily practice.</p><a class="btn btn-warning me-2" href="get_involved.html#donate">Donate</a><a class="btn btn-outline-light me-2" href="get_involved.html#volunteer">Volunteer</a><a class="btn btn-outline-light" href="species.html">Adopt an animal</a></div></section>
+            <section class="newsletter py-5"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-6"><p class="section-kicker">Stay connected</p><h2>Stay close to the wild.</h2><p class="mb-0">Receive occasional field notes and conservation updates.</p></div><div class="col-lg-6"><form class="row g-2" data-demo-form><div class="col-sm-8"><label class="visually-hidden" for="newsletterEmail">Email address</label><input class="form-control" id="newsletterEmail" type="email" placeholder="Email address" required></div><div class="col-sm-4"><button class="btn btn-forest w-100" type="submit">Subscribe</button></div></form><p class="small mt-2 mb-0" hidden>Thank you for joining the list.</p></div></div></div></section>
+        </main>
+        <footer class="site-footer py-4">
+            <div class="container d-flex flex-column flex-md-row justify-content-between gap-3"><span>&copy; Animal Preservation Centre</span>
+                <div class="d-flex gap-3">
+                    <a href="https://www.amazon.com">Amazon</a>
+                    <a href="https://www.ebay.com" target="_blank">eBay</a>
+                    <a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams</a>
+                </div>
             </div>
-            <div id="nav">
-                <!-- Anchor tags used for internal navigation -->
-                <a href="index.html">Home</a>
-                <a href="about_us.html">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-            </div>
-        </div>
-
-        <div id="main">
-            <!-- Examples of heading tags -->
-            <h1>Animal Preservation Centre - Americas</h1>
-            <hr/>
-            <h2 class="DifferentLookingText">Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-
-            <!-- Sample iframe embedding YouTube video -->
-            <h2>Preservation Success Story</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CvAqzg7zDsA" title="Jamaican Rock Iguana - Success Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla natus, ipsa qui excepturi sit praesentium voluptatibus quo veniam sunt soluta. Distinctio dolore voluptatum labore natus adipisci qui, consequuntur voluptas nam.</p>
-            <p class="DifferentLookingText WeirdColor">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta nisi 
-                fuga aspernatur, fugit quo voluptas quos alias rem quisquam voluptate voluptatem aut ipsa, repellendus deserunt nesciunt! Sunt facere est deserunt?
-            </p>
-
-            <!-- Embedding video and audio -->
-            <h2>Cayman Brac - Rock Iguana</h2>
-            <video width="560" height="315" controls>
-                <source src="videos/brac_iguana.MP4" type="video/mp4" />
-                <source src="videos/brac_iguana.ogg" type="video/ogg" />
-                <source src="videos/brac_iguana.wmv" type="video/wmv" />
-            Your browser does not support the video
-            </video>
-            <br/>
-            <audio controls>
-                <source src="music/song.mp3" type="audio/mpeg" />
-            Your browser does not support the video
-            </audio>
-        </div>
-
-        <div id="footer">
-            <br/><br/>
-            <a href="https://www.amazon.com">Amazon</a>
-    
-            <a href="https://www.ebay.com" target="_blank">eBay</a>
-            <a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams Website</a>
-        </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/site.js"></script>
     </body>
 </html>

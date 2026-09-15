@@ -1,82 +1,59 @@
-h1{
-    color: rgb(52, 94, 173);
-}
-h2{
-    color: crimson;
-    text-decoration: overline;
-}
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-p{
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#banner{
-    background-color: darkkhaki;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    text-align: center;
-}
-#banner p{
-    margin: 0;
-}
-
-#nav, nav{
-    background-color: cadetblue;
-    padding: 10px;
-    text-align: center;
-}
-
-#nav a, nav a{
-    color: aliceblue;
-    text-decoration: none;
-    font-size: large;
-    margin-right: 10px;
-    padding: 10px;
-}
-
-#nav a:hover{
-    background-color: aquamarine;
-    color: cadetblue;
-}
-
-nav a:hover{
-    background-color: aquamarine;
-    color: cadetblue;
-}
-
-#footer, footer{
-    background-color: #E7E9EB;
-    min-height: 150px;
-    text-align: center;
-}
-
-#footer a, footer a{
-    color: blue;
-    text-decoration: overline;
-}
-
-#main, main{
-    width: 80%;
-    margin: 0 auto;
-}
-
-article{
-    margin-bottom: 50px;
-}
-
-.logo{
-    height: 50px;
-    width: 50px;
-}
-
-.DifferentLookingText{
-    font-size: larger;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-.WeirdColor{
-    color: darkmagenta;
-}
+:root { --forest: #173f35; --leaf: #2f7055; --sun: #f3b544; --mist: #f4f7f3; --ink: #19312b; }
+body { background: var(--mist); color: var(--ink); font-family: Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6 { color: var(--forest); font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
+.site-alert { background: var(--sun); color: var(--forest); font-size: .85rem; font-weight: 700; letter-spacing: .08em; padding: .55rem 1rem; text-align: center; text-transform: uppercase; }
+.site-nav { background: var(--forest); }
+.site-nav .navbar-brand, .site-nav .nav-link { color: #fff; }
+.site-nav .navbar-brand { font-family: Georgia, 'Times New Roman', serif; font-size: 1.35rem; font-weight: 700; }
+.site-nav .nav-link { border-bottom: 2px solid transparent; margin-left: .75rem; }
+.site-nav .nav-link:hover, .site-nav .nav-link.active { border-bottom-color: var(--sun); color: var(--sun); }
+.page-main { min-height: calc(100vh - 250px); }
+.hero { background: linear-gradient(120deg, rgba(23, 63, 53, .98), rgba(47, 112, 85, .82)), url('../images/baby-snow-leopard.jpg') center/cover; border-radius: 0 0 1.5rem 1.5rem; color: #fff; padding: 5rem 2rem; }
+.hero h1, .hero p { color: #fff; }
+.hero h1 { font-size: clamp(2.3rem, 5vw, 4.5rem); max-width: 760px; }
+.section-kicker { color: var(--leaf); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.content-panel { background: #fff; border: 0; border-radius: .75rem; box-shadow: 0 10px 30px rgba(23, 63, 53, .08); }
+.content-panel img { max-height: 360px; object-fit: cover; width: 100%; }
+.site-footer { background: var(--forest); color: rgba(255, 255, 255, .72); }
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { color: var(--sun); }
+.logo { height: 48px; object-fit: contain; width: 48px; }
+.table { vertical-align: middle; }
+.form-control:focus { border-color: var(--leaf); box-shadow: 0 0 0 .2rem rgba(47, 112, 85, .2); }
+.btn-forest { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn-forest:hover { background: var(--forest); border-color: var(--forest); color: #fff; }
+.DifferentLookingText { font-weight: 700; }
+.WeirdColor { color: var(--leaf); }
+.site-nav .btn-donate { background: var(--sun); border-color: var(--sun); color: var(--forest); font-weight: 700; margin-left: 1rem; }
+.site-nav .btn-donate:hover { background: #fff; border-color: #fff; color: var(--forest); }
+.section-band { padding: 5rem 0; }
+.section-band.alt { background: #e8efe9; }
+.stat-number { color: var(--leaf); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 700; }
+.program-card, .species-card, .story-card { transition: box-shadow .25s ease, transform .25s ease; }
+.program-card:hover, .species-card:hover, .story-card:hover { box-shadow: 0 16px 35px rgba(23, 63, 53, .16); transform: translateY(-5px); }
+.card-image { height: 220px; object-fit: cover; width: 100%; }
+.species-card .card-image { height: 190px; }
+.status-badge { background: #e7f0e9; border-radius: 999px; color: var(--leaf); font-size: .78rem; font-weight: 700; padding: .3rem .65rem; }
+.story-image { height: 100%; min-height: 300px; object-fit: cover; width: 100%; }
+.dark-cta { background: var(--forest); color: #fff; padding: 4rem 0; }
+.dark-cta h2, .dark-cta p { color: #fff; }
+.newsletter { background: #e8efe9; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+.filter-bar { gap: .5rem; }
+.filter-bar .active { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.species-profile { scroll-margin-top: 2rem; }
+.species-profile img { min-height: 300px; object-fit: cover; width: 100%; }
+.gallery-image { cursor: pointer; height: 240px; object-fit: cover; transition: transform .25s ease; width: 100%; }
+.gallery-image:hover { transform: scale(1.03); }
+.lightbox { align-items: center; background: rgba(23, 63, 53, .9); display: flex; inset: 0; justify-content: center; padding: 2rem; position: fixed; z-index: 1060; }
+.lightbox img { max-height: 80vh; max-width: min(900px, 100%); object-fit: contain; }
+.lightbox-content { color: #fff; text-align: center; }
+.lightbox-close { background: transparent; border: 1px solid #fff; color: #fff; font-size: 1.5rem; line-height: 1; padding: .3rem .65rem; position: absolute; right: 1.5rem; top: 1.5rem; }
+.timeline { border-left: 2px solid var(--sun); list-style: none; padding-left: 1.5rem; }
+.timeline li { margin-bottom: 1.5rem; position: relative; }
+.timeline li::before { background: var(--sun); border: 4px solid var(--mist); border-radius: 50%; content: ''; height: 14px; left: -2.05rem; position: absolute; top: .25rem; width: 14px; }
+.impact-bar { background: var(--leaf); border-radius: .25rem; height: .65rem; }
+.footer-heading { color: var(--sun); font-family: Arial, sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+@media (max-width: 991px) { .site-nav .nav-link { margin-left: 0; } .site-nav .btn-donate { margin: .75rem 0 0; width: fit-content; } }
+@media (max-width: 575px) { .hero { padding: 4rem 1rem; } .hero .btn { margin: .35rem 0 0; width: 100%; } .site-alert { font-size: .7rem; } }

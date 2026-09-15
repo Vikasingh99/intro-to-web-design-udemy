@@ -4,46 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/site.css" />
 </head>
 <body>
     <header>
-        <div id="banner">
-            <p>Notification</p>
-        </div>
-        <nav>
-            <!-- Anchor tags used for internal navigation -->
-            <a href="index.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="contact_us.html">Contact Us</a>
-        </nav>
+        <div class="site-alert">Protecting remarkable wildlife, one habitat at a time</div>
+        <nav class="site-nav navbar navbar-expand-lg navbar-dark"><div class="container"><a class="navbar-brand" href="index.html">APC <span class="fw-normal">Americas</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="siteNav"><div class="navbar-nav ms-auto"><a class="nav-link" href="index.html">Home</a><a class="nav-link active" href="about_us.html">About Us</a><a class="nav-link" href="programs.html">Programs</a><a class="nav-link" href="species.html">Species</a><a class="nav-link" href="impact.html">Impact</a><a class="nav-link" href="stories.html">Stories</a><a class="nav-link" href="get_involved.html">Get Involved</a><a class="btn btn-donate" href="get_involved.html#donate">Donate</a></div></div></div></nav>
     </header>
     
-    <main>
-        <h1 >About Us</h1>
-        <hr/>
+    <main class="page-main container py-5">
+        <p class="section-kicker">Our mission</p>
+        <h1 class="display-4 mb-5">People for the wild.</h1>
 
-        <article>
-            <h2>Animal Preservation Agency</h2>
-            <img src="images/baby-snow-leopard.jpg" alt="Baby Snow Leopard" />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque facere omnis quis nesciunt fugit dolore nihil hic maiores a assumenda ducimus in totam, et maxime eveniet aspernatur eum est dolor.</p>
+        <article class="content-panel overflow-hidden mb-5"><div class="row g-0 align-items-center"><div class="col-lg-6"><img src="images/baby-snow-leopard.jpg" alt="Baby Snow Leopard" /></div><div class="col-lg-6 p-4 p-lg-5"><h2>Animal Preservation Agency</h2><p class="mb-0">We bring field science, community partnerships, and practical protection together to give vulnerable wildlife room to recover.</p></div></div>
         </article>
        
-        <article>
+        <div class="row g-4"><article class="col-md-6"><div class="content-panel h-100 p-4">
             <h2>Daily Tasks</h2>
             <!-- Unordered list tag. Produces bullet points -->
-            <ul>
+            <ul class="list-group list-group-flush">
                 <li>We patrol preservations</li>
                 <li>We police</li>
                 <li>We Protect</li>
                 <li>We rescue</li>
             </ul>
-        </article>
+        </div></article>
        
-        <article>
+        <article class="col-md-6"><div class="content-panel h-100 p-4">
             <h2>How you can join</h2>
             <!-- Ordered list tag. Produces numbered points in a list -->
-            <ol>
+            <ol class="list-group list-group-numbered">
                 <li>Call our recruitment centre</li>
                 <li>Send your resume</li>
                 <li>Attend Interview</li>
@@ -52,17 +43,18 @@
                     <a href="contact_us.html">Contact Centre Office</a>
                 </li>
             </ol>
-        </article>
+        </div></article></div>
 
-        
+        <section class="row g-4 mt-5">
+            <div class="col-md-4"><article class="content-panel h-100 p-4"><p class="section-kicker">Our story</p><h2 class="h3">Rooted in care.</h2><p class="mb-0">APC Americas began with a simple belief: practical protection and local knowledge belong together.</p></article></div>
+            <div class="col-md-4"><article class="content-panel h-100 p-4"><p class="section-kicker">Our vision</p><h2 class="h3">Wild places, connected.</h2><p class="mb-0">We imagine a future where wildlife can move, recover, and thrive alongside people.</p></article></div>
+            <div class="col-md-4"><article class="content-panel h-100 p-4"><p class="section-kicker">Our values</p><h2 class="h3">Care. Evidence. Partnership.</h2><p class="mb-0">We lead with respect, learn continuously, and share responsibility for outcomes.</p></article></div>
+        </section>
+        <section class="section-band px-0"><div class="row g-4 align-items-center"><div class="col-lg-7"><p class="section-kicker">Where we work</p><h2>Across the Americas.</h2><p>Our demonstration network follows the habitats that connect forests, islands, wetlands, and coastal communities. Local partners make every program more relevant and resilient.</p></div><div class="col-lg-5"><div class="content-panel p-4"><h3 class="h4">How support is used</h3><p class="mb-2">Rescue and care</p><div class="impact-bar mb-3" style="width:80%"></div><p class="mb-2">Habitat protection</p><div class="impact-bar mb-3" style="width:65%"></div><p class="mb-2">Community education</p><div class="impact-bar" style="width:55%"></div><p class="small mt-3 mb-0">Illustrative project figures for this demo site.</p></div></div></div></section>
     </main>
     
-    <footer>
-        <br/><br/>
-            <a href="https://www.amazon.com">Amazon</a>
-    
-            <a href="https://www.ebay.com" target="_blank">eBay</a>
-            <a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams Website</a>
+    <footer class="site-footer py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-3"><span>&copy; Animal Preservation Centre</span><div class="d-flex gap-3"><a href="https://www.amazon.com">Amazon</a><a href="https://www.ebay.com" target="_blank">eBay</a><a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams</a></div></div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

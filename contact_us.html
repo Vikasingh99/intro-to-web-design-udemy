@@ -4,29 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/site.css" />
 </head>
 <body> 
     <header>
-        <div id="banner">
-            <p>Notification</p>
-        </div>
-        <nav>
-            <!-- Anchor tags used for internal navigation -->
-            <a href="index.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="contact_us.html">Contact Us</a>
-        </nav>
+        <div class="site-alert">Protecting remarkable wildlife, one habitat at a time</div>
+        <nav class="site-nav navbar navbar-expand-lg navbar-dark"><div class="container"><a class="navbar-brand" href="index.html">APC <span class="fw-normal">Americas</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="siteNav"><div class="navbar-nav ms-auto"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about_us.html">About Us</a><a class="nav-link" href="programs.html">Programs</a><a class="nav-link" href="species.html">Species</a><a class="nav-link" href="impact.html">Impact</a><a class="nav-link" href="stories.html">Stories</a><a class="nav-link" href="get_involved.html">Get Involved</a><a class="btn btn-donate" href="get_involved.html#donate">Donate</a></div></div></div></nav>
     </header>
 
-    <main>
-
-        <h1 >Contact Us</h1>
-        <hr/>
-        <article>
+    <main class="page-main container py-5"><p class="section-kicker">Connect with us</p><h1 class="display-4 mb-5">Let's protect more together.</h1><div class="row g-4"><article class="col-lg-7"><div class="content-panel p-4 p-lg-5 h-100">
                 <!-- HTML Table syntax. Table tag, then tr and then th for headers and td for data -->
         <h2>Locations</h2>
-        <table>
+        <div class="table-responsive"><table class="table table-hover align-middle">
             <tr>
                 <th>Logo</th>
                 <th>Location</th>
@@ -61,39 +51,41 @@
                 <td>mobaybranch@preservation.com</td>
                 <td>18767418589</td>
             </tr>
-        </table>
-        </article>
+        </table></div></div></article>
 
-        <article>
+        <article class="col-lg-5"><div class="content-panel p-4 p-lg-5 h-100">
             <h2>General Inquiries</h2>
             <!-- HTML form tag. the action attribute navigates to a page after submission. -->
-            <form action="confirmation.html">
+            <form action="confirmation.html" method="get">
                 <label for="fullname">Name: *</label><br/>
-                <input required type="text" id="fullname" name="fullname" />
-                <br/><br/>
+                <input class="form-control" required type="text" id="fullname" name="fullname" />
+                <br/>
                 <label for="email">Email Address: *</label><br/>
-                <input required type="email" id="email" name="emailaddress" />
-                <br/><br/>
+                <input class="form-control" required type="email" id="email" name="emailaddress" />
+                <br/>
+                <label for="phone">Phone Number:</label><br/>
+                <input class="form-control" type="tel" id="phone" name="phone" />
+                <br/>
+                <label for="subject">Subject: *</label><br/>
+                <input class="form-control" required type="text" id="subject" name="subject" />
+                <br/>
                 <label>Are you employed?</label><br/>
                 <input type="radio" value="Y" name="employed"/> Yes
                 <input type="radio" value="N" name="employed"/> No
                 <br/><br/>
                 <label for="inquiry">State your inquiry *</label><br/>
-                <textarea required cols="50" rows="10" maxlength="150" id="inquiry" name="inquiry"></textarea>
-                <br/><br/>
-                <input type="submit" />
+                <textarea class="form-control" required rows="6" maxlength="150" id="inquiry" name="inquiry"></textarea>
+                <br/>
+                <input class="btn btn-forest" type="submit" value="Send inquiry" />
             </form>
-        </article>
+        </div></article></div>
+        <section class="content-panel p-4 p-lg-5 mt-5"><div class="row g-4 align-items-center"><div class="col-lg-7"><p class="section-kicker">Find our team</p><h2>Local relationships, shared responsibility.</h2><p class="mb-0">Our branch details are demonstration content ready to be replaced with verified locations. Reach out before visiting so we can point you to the right conservation team.</p></div><div class="col-lg-5"><div class="ratio ratio-16x9 rounded overflow-hidden" style="background: #dbe7dd;"><div class="d-flex align-items-center justify-content-center text-center p-4"><div><strong>Regional map placeholder</strong><br><span class="small">Americas conservation network</span></div></div></div></div></div></section>
         
     </main>
 
-    <footer>
-        <br/><br/>
-            <a href="https://www.amazon.com">Amazon</a>
-
-            <a href="https://www.ebay.com" target="_blank">eBay</a>
-            <a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams Website</a>
+    <footer class="site-footer py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-3"><span>&copy; Animal Preservation Centre</span><div class="d-flex gap-3"><a href="https://www.amazon.com">Amazon</a><a href="https://www.ebay.com" target="_blank">eBay</a><a href="https://www.trevoirwilliams.com" target="_blank">Trevoir Williams</a></div></div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
